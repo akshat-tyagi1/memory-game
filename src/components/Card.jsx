@@ -1,6 +1,6 @@
-function Card({ name, image, id, reShuffle }) {
+function Card({ name, image, id, handleOnClick }) {
   return (
-    <div className="card" key={id} onClick={reShuffle}>
+    <div className="card" key={id} onClick={() => handleOnClick(id)}>
       <img src={image} alt={name} />
       <p className="poke-name">{name}</p>
     </div>

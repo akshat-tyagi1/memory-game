@@ -11,7 +11,7 @@ async function fetchCards(id) {
   name = name.slice(0, 1).toUpperCase() + name.slice(1);
   const image = data.sprites.other["official-artwork"].front_default;
 
-  return [name, image, crypto.randomUUID()];
+  return [name, image, id];
 }
 
 export default fetchCards;

@@ -1,18 +1,15 @@
 import Card from "./Card";
-import shuffleCards from "../utils/shuffleCards";
 
-function CardsGrid({ cardsInfo, reShuffle }) {
-  console.log(cardsInfo);
-  const cardsCopy = shuffleCards(cardsInfo);
-
+function CardsGrid({ cardsInfo, handleOnClick }) {
   return (
     <div className="cards-container">
-      {cardsCopy.map((card) => (
+      {cardsInfo.map((card) => (
         <Card
           name={card[0]}
           image={card[1]}
+          id={card[2]}
           key={card[2]}
-          reShuffle={reShuffle}
+          handleOnClick={handleOnClick}
         />
       ))}
     </div>
