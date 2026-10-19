@@ -1,9 +1,13 @@
 function shuffleCards(cardsInfo) {
-  for (let i = cardsInfo.length - 1; i > 0; i--) {
+  const cardsCopy = [...cardsInfo];
+
+  for (let i = cardsCopy.length - 1; i > 0; i--) {
     const random = Math.floor(Math.random() * (i + 1));
 
-    [cardsInfo[i], cardsInfo[random]] = [cardsInfo[random], cardsInfo[i]];
+    [cardsCopy[i], cardsCopy[random]] = [cardsCopy[random], cardsCopy[i]];
   }
+
+  return cardsCopy;
 }
 
 export default shuffleCards;
