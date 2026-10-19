@@ -19,10 +19,11 @@ function App() {
         const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
         const data = await response.json();
 
-        const name = data.name;
+        let name = data.name;
+        name = name.slice(0, 1).toUpperCase() + name.slice(1);
         const image = data.sprites.other["official-artwork"].front_default;
 
-        temp.push([name, image]);
+        temp.push([name, image, crypto.randomUUID()]);
       }
 
       setCardsInfo(temp);

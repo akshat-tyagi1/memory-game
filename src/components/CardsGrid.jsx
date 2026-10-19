@@ -5,7 +5,7 @@ function CardsGrid({ cardsInfo }) {
   return (
     <div className="cards-container">
       {cardsInfo.map((card) => (
-        <Card name={card[0]} image={card[1]} />
+        <Card name={card[0]} image={card[1]} id={card[2]}/>
       ))}
     </div>
   );
