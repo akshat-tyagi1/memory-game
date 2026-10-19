@@ -19,8 +19,9 @@ function App() {
   useEffect(() => {
     async function getImages() {
       try {
-        const temp = await Promise.all(pokemonIds.map((id) => fetchCards(id)));
+        // fetches all the necessary details about pokemons and upadate the state.
 
+        const temp = await Promise.all(pokemonIds.map((id) => fetchCards(id)));
         setCardsInfo(temp);
       } catch (error) {
         console.error("Failed to load Pokémon cards:", error);
@@ -30,6 +31,7 @@ function App() {
     getImages();
   }, []);
 
+  // Shuffles the images and tracks the score.
   const handleOnClick = (id) => {
     const shuffledCopy = shuffleCards(cardsInfo);
     setCardsInfo(shuffledCopy);
@@ -41,7 +43,6 @@ function App() {
       if (score > bestScore) {
         setBestScore(score);
       }
-      
     } else {
       setClickedIds([...clickedIds, id]);
       setScore((prev) => prev + 1);

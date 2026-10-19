@@ -1,6 +1,7 @@
 function shuffleCards(cardsInfo) {
   const cardsCopy = [...cardsInfo];
 
+  // Fisher–Yates shuffle algorithm
   for (let i = cardsCopy.length - 1; i > 0; i--) {
     const random = Math.floor(Math.random() * (i + 1));
 
