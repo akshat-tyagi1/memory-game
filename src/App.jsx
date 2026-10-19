@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Header from "./components/header";
 import CardsGrid from "./components/CardsGrid";
+import fetchCards from "./utils/fetchCards";
 import "./App.css";
 
 function App() {
@@ -13,20 +14,14 @@ function App() {
 
   useEffect(() => {
     async function getImages() {
-      const temp = [];
+      try {
+        const temp = await Promise.all(pokemonIds.map((id) => fetchCards(id)));
+        
+        setCardsInfo(temp);
 
-      for (const id of pokemonIds) {
-        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
-        const data = await response.json();
-
-        let name = data.name;
-        name = name.slice(0, 1).toUpperCase() + name.slice(1);
-        const image = data.sprites.other["official-artwork"].front_default;
-
-        temp.push([name, image, crypto.randomUUID()]);
+      } catch (error) {
+        console.error("Failed to load Pokémon cards:", error);
       }
-
-      setCardsInfo(temp);
     }
 
     getImages();
