@@ -2,7 +2,7 @@ import "./Cards.css";
 
 function Card({ name, image, id, handleOnClick }) {
   return (
-    <div className="card" key={id} onClick={() => handleOnClick(id)}>
+    <div className="card" onClick={() => handleOnClick(id)}>
       <img src={image} alt={name} />
       <p className="poke-name">{name}</p>
     </div>

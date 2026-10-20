@@ -35,3 +35,21 @@ h2,
 h3 {
   font-family: "Fredoka", sans-serif;
 }
+
+.error-message {
+  text-align: center;
+  padding: 40px 18px;
+  color: var(--color-text);
+  font-weight: 700;
+}
+
+.error-message button {
+  margin-top: 12px;
+  padding: 8px 18px;
+  border: none;
+  border-radius: 12px;
+  background-color: var(--color-accent);
+  color: var(--color-text);
+  font-weight: 700;
+  cursor: pointer;
+}
