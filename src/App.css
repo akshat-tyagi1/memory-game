@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800&display=swap");
+
+:root {
+  /* Page and component backgrounds */
+  --color-background: #fff8f3;
+  --color-header: #f9e2e7;
+  --color-card: #ffffff;
+  --color-accent: #e8dff8;
+
+  /* Text */
+  --color-text: #59465c;
+  --color-text-muted: #b77d91;
+
+  /* Borders and shadows */
+  --color-border: #f0dce2;
+  --color-shadow: rgba(89, 70, 92, 0.1);
+
+  /* Hover effects */
+  --color-card-hover: #fff0f3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: "Nunito", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Fredoka", sans-serif;
+}

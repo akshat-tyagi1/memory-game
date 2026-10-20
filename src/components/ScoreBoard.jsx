@@ -1,9 +1,11 @@
+import "./ScoreBoard.css";
+
 function ScoreBoard({ score, bestScore }) {
   return (
-    <>
-      <p className="score">{score}</p>
-      <p className="best-score">{bestScore}</p>
-    </>
+    <div className="score-card">
+      <p className="score">Score: {score}</p>
+      <p className="best-score">Best Score: {bestScore}</p>
+    </div>
   );
 }
 

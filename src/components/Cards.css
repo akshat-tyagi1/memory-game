@@ -1,0 +1,19 @@
+.card {
+  background-color: var(--color-card);
+  border-radius: 18px;
+  border: 2px solid var(--color-border);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.poke-name {
+  color: var(--color-text);
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}

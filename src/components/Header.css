@@ -1,0 +1,22 @@
+.header {
+  display: flex;
+  background-color: var(--color-header);
+  justify-content: space-between;
+  padding: 10px 35px;
+}
+
+.title {
+  color: var(--color-text);
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  font-size: 34px;
+  font-weight: 900;
+  margin: 0;
+}
+
+.info {
+  color: var(--color-text-muted);
+}

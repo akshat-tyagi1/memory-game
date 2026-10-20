@@ -1,4 +1,5 @@
 import Card from "./Card";
+import "./CardsGrid.css";
 
 function CardsGrid({ cardsInfo, handleOnClick }) {
   return (
