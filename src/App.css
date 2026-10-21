@@ -19,9 +19,16 @@
   --color-card-hover: #fff0f3;
 }
 
+#root {
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {

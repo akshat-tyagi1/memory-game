@@ -2,7 +2,8 @@
   display: flex;
   background-color: var(--color-header);
   justify-content: space-between;
-  padding: 10px 35px;
+  padding: 10px clamp(16px, 4vw, 35px);
+  flex-shrink: 0;
 }
 
 .title {
@@ -12,11 +13,19 @@
 }
 
 .name {
-  font-size: 34px;
+  font-size: clamp(1.5rem, 1rem + 2vw, 2.125rem);
   font-weight: 900;
   margin: 0;
 }
 
 .info {
   color: var(--color-text-muted);
+  font-size: clamp(0.8rem, 0.7rem + 0.5vw, 1rem);
+}
+
+@media (orientation: portrait) {
+  .header {
+    flex-direction: column;
+    gap: 6px;
+  }
 }

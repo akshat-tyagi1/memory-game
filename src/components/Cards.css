@@ -1,19 +1,43 @@
 .card {
   background-color: var(--color-card);
-  border-radius: 18px;
+  border-radius: clamp(12px, 2vw, 18px);
   border: 2px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  box-shadow: 0px 4px 12px var(--color-shadow);
+  transition:
+    transform 0.2s ease-in-out,
+    background-color 0.2s ease-in-out;
+  cursor: pointer;
+  user-select: none;
+  container-type: inline-size;
+}
+
+@media (hover: hover) {
+    .card:hover {
+        background-color: var(--color-card-hover);
+        transform: scale(1.05);
+    }
+}
+
+.card:active {
+  transform: scale(0.97);
 }
 
 .card img {
   width: 100%;
   height: auto;
   object-fit: contain;
+  flex: 1;
+  min-height: 0;
 }
 
 .poke-name {
   color: var(--color-text);
   text-align: center;
-  font-size: 18px;
   font-weight: 700;
-  margin-bottom: 8px;
+  font-size: clamp(0.75rem, 11cqw, 1.125rem);
+  margin-bottom: clamp(2px, 3cqw, 8px);
 }
+

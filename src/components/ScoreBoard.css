@@ -1,8 +1,8 @@
 .score-card {
-    display: flex;
-    gap: 20px;
-    font-size: 18px;
-    font-weight: 800;
-    color: var(--color-text);
-    align-items: center;
+  display: flex;
+  font-size: clamp(0.9rem, 0.75rem + 0.4vw, 1.125rem);
+  gap: clamp(14px, 2vw, 20px);
+  font-weight: 800;
+  color: var(--color-text);
+  align-items: center;
 }

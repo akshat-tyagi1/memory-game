@@ -1,6 +1,21 @@
 .cards-container {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  gap: 8px;
-  padding: 18px;
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+  gap: clamp(6px, 1vw, 8px);
+  padding: clamp(10px, 2vw, 18px) clamp(12px, 4vw, 35px);
+  max-width: 100%;
+  margin: 0 auto;
+  flex: 1;
+  min-height: 0;
+  aspect-ratio: 2/1;
+}
+
+@media (orientation: portrait) {
+  .cards-container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, minmax(0, 1fr));
+    aspect-ratio: auto;
+    width: 100%;
+  }
 }
